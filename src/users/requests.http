@@ -1,0 +1,42 @@
+###Create a new User
+POST http://localhost:3000/users/signup
+Content-Type: application/json
+
+{
+    "email":"test1@gmail.com",
+    "password":"test1234"
+
+}
+
+###Login with email and password
+POST http://localhost:3000/users/signin
+Content-Type: application/json
+
+{
+    "email":"test@gmail.com",
+    "password":"test1234"
+}
+
+###Get current login user by session userID
+GET  http://localhost:3000/users/whoami
+
+### Sign out 
+POST  http://localhost:3000/users/signout
+
+### GET a particular user by Id
+GET  http://localhost:3000/users/9
+
+### GET all users
+GET http://localhost:3000/users?email=ddd@ddd.com
+
+### DELETE a user with id
+DELETE http://localhost:3000/users/3
+
+### Update a user
+PATCH http://localhost:3000/users/10
+Content-Type: application/json
+
+{
+    "email":"dddddd@ddd.com",
+    "password":"test1234"
+}
